@@ -14,25 +14,27 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <div class="d-flex justify-content-center" style="height: 80vh">
+    <div class="container">
       <div>
         <div>
           <h1>🐶Get some doggy pics🐾</h1>
-        </div class="w-50">
-        <button id="getAllBreeds" class="btn btn-primary">
-          GET ALL BREEDS
-        </button>
-        <button id="getRandomPic" class="btn btn-dark">GET RANDOM PIC</button>
+        </div>
+        <div class="container">
+          <button id="getAllBreeds" class="btn btn-primary">
+            GET ALL BREEDS
+          </button>
+          <button id="getRandomPic" class="btn btn-dark">GET RANDOM PIC</button>
+          <button id="getPicsByBreed" class="btn btn-dark">
+            GET PIC by BREED
+          </button>
 
-        <button id="getPicsByBreed" class="btn btn-dark">
-          GET PIC by BREED
-        </button>
-        <input
-          type="text"
-          id="inputText"
-          placeholder="enter the breed bruh"
-          class="form-control"
-        />
+          <input
+            type="text"
+            id="inputText"
+            placeholder="enter the breed bruh"
+            class="form-control w-75"
+          />
+        </div>
       </div>
       <div id="container" class="row w-75"></div>
       <script
@@ -43,4 +45,3 @@
     </div>
   </body>
 </html>
-

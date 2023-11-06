@@ -54,16 +54,18 @@ function getPicsByBreed(e) {
       console.log(data);
 
       const url = data.message;
+
+      console.log(data.status);
       console.log(url);
 
       container.innerHTML = "";
 
-      if (data.status === "error") {
+      if (data.status !== "success") {
         console.log("big error");
         container.innerHTML =
           "<p>There was an error. Please check the breed.</p>";
       } else {
-        container.innerHTML = `<img src=${url} style="max-width: 60vw; max-height:80vh">`;
+        container.innerHTML = `<img src=${url} class ="w-50">`;
       }
     })
     .catch((err) => console.error(err));
