@@ -51,7 +51,7 @@ function getPicsByBreed(e) {
     .get(`https://dog.ceo/api/breed/${breed}/images/random`)
     .then((res) => {
       const { data } = res;
-      console.log(data);
+      console.log(res);
 
       const url = data.message;
 
@@ -60,15 +60,16 @@ function getPicsByBreed(e) {
 
       container.innerHTML = "";
 
-      if (data.status !== "success") {
-        console.log("big error");
-        container.innerHTML =
-          "<p>There was an error. Please check the breed.</p>";
-      } else {
+      if (res.code === 200) {
         container.innerHTML = `<img src=${url} class ="w-50">`;
       }
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      // console.log("ohoh");
+      container.innerHTML =
+        "<p>There was an error. Please check the breed.</p>";
+      console.error(err.message);
+    });
 }
 
 getAllBreedsButton.addEventListener("click", getAllBreeds);

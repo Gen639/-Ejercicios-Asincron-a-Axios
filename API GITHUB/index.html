@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Github</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>API Github</h1>
+      <div class="form-group">
+        <h2>Search here the name of the Github user</h2>
+      </div>
+      <form id="form" class="form-group">
+        <input
+          type="search"
+          class="form-control"
+          id="searchId"
+          placeholder="search"
+        />
+        <input type="submit" value="Find a user" class="btn btn-primary" />
+      </form>
+      <section id="container"></section>
+    </div>
+  </body>
+</html>
